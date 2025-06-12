@@ -32,6 +32,7 @@ public:
         currentSize = other.currentSize;
         T* temp_ptr = other.data;
         data = new T(temp_ptr->current);   //other과 동일한 객체를 만들기 위해 동일한 맴버변수로 만들어준다.
+        //currentCapacity가 아니라 current를 가리키는데 왜 되지?
         //dataFin = data + currentCapacity - 1;
         //복사 생성자 : 깊은 복사를 하는 생성자. 메모리 공간이 다르다.
         //멤버변수를 가져오는데 똑같은 값으로 생성함.
@@ -49,7 +50,8 @@ public:
         //auto : 타입 추론. 컴파일 타임에 데이터 타입을 알아서 유추.
         for (const auto& e : list) // list의 요소 -> 아직 미정. 여기서는 T타입(string double float)
         {
-            data[i++] = e;
+            *(data+i) = e;
+            i++;
         }
     }
 
