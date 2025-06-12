@@ -8,7 +8,7 @@ class SimpleVector {
 
 public: //일단 멤버변수 data의 원소를 출력하기 위함
     T* data;        // T 타입의 배열을 가리키는 배열 포인터
-    T* dataFin;     // T 타입 배열의 마지막 원소를 가리키는 배열 포인터
+    //T* dataFin;     // T 타입 배열의 마지막 원소를 가리키는 배열 포인터
     int currentCapacity;    //배열의 크기
     int currentSize;        //배열 원소의 개수
 
